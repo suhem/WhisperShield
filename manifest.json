@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "WhisperShield",
+    "version": "1.0",
+    "description": "Hide your Whatsapp Messages on Desktop for your Privacy",
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://web.whatsapp.com/"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "css": [
+                "styles.css"
+            ]
+        }
+    ],
+    "browser_action": {
+        "default_popup": "popup.html"
+    }
+}
